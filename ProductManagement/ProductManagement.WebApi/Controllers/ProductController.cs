@@ -29,7 +29,7 @@ namespace ProductManagement.WebApi.Controllers
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> CreateProductsAsync([FromBody] ProductRQ request)
+        public async Task<IActionResult> CreateProductAsync([FromBody] ProductRQ request)
         {
             await ProductSvc.CreateProductAsync(request);
             return Created();
